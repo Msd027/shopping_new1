@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+		<link href="../image/icon1.ico" rel="icon">
+		<title>10's Free</title>
+		<link rel="stylesheet" href="cart.css">
+	</head>
+	<body>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="cart.js" defer></script>
+		<header class="head">
+			<div class="logo-image">
+				<a href="../index/index.html">
+					<img src="../image/logo.png">
+				</a>
+			</div>
+			<div class="list">  
+				<div class="fashion"><a href="../fashion/fashion.html">Fashion</a></div>
+				<div class="beauty"><a href="../beauty/beauty.html">Beauty</a></div>
+				<div class="electronics"><a href="../electronic/electronics.html">Electronics</a></div>
+				<div class="decorative"><a href="../decorative/decorative.html">Decorative</a></div>
+			</div>
+			<div class="search-box">
+				<div class="search">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<input type="text" placeholder="Search your item" class="input">
+				</div>
+			</div>
+			<div class="right">
+				<div class="user">
+					<div class="icon"><i class="fa-regular fa-user"></i></div>
+					<div class="font">User</div>
+					<div class="dropdown-content">
+						<a href="#">Profile</a>
+						<a href="#">Address</a>
+						<a href="../logout/logout.html">Logout</a>
+					</div>
+				</div>
+				<div class="wishlist">
+					<div class="icon"><i class="fa-regular fa-heart"></i></div>
+					<div class="font">Wishlist</div>
+				</div>
+				<div class="cart">
+					<div class="icon">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</div>
+					<div class="font">Cart</div>
+				</div>
+				
+			</div>
+        </header>
+
+        <!-- Cart Page -->
+        <div class="cart-container">
+            <h1>Your Cart</h1>
+            <div id="cart-items"></div>
+            <h2 id="cart-total">Total: 0.00</h2>
+            <a href="../checkout/checkout.html" style="text-decoration: none; color: #fff;"><button id="checkout-btn">Proceed To Checkout</button></a>
+        </div>
+
+        <br>
+
+		<div class="back-to-top"><a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a></div>
+
+		<div class="last">
+			<div class="block">
+				<div class="mini-block">
+					<div class="list2">
+						<ul>
+							<h5>ONLINE SHOPPING</h5>
+							<p><a href="../fashion/fashion.html" style="text-decoration: none; color: #414141;">Fashion</a></p>
+							<p><a href="../beauty/beauty.html" style="text-decoration: none; color: #414141;">Beauty</a></p>
+							<p><a href="../electronic/electronics.html" style="text-decoration: none; color: #414141;">Electronics</a></p>
+							<p><a href="../decorative/decorative.html" style="text-decoration: none; color: #414141;">Decorative</a></p>
+						</ul>
+					</div>
+					<div class="list2">
+						<ul>
+							<h5>CUSTOMER POLICIES</h5>
+							<p>Contact Us</p>
+							<p>FAQ</p>
+							<p>T&C</p>
+							<p>Shipping</p>
+							<p>Cancellation</p>
+							<p>Returns</p>
+							<p>Privacy Policies</p>
+							<p>Grievance Officer</p>
+						</ul>
+					</div>
+					<div class="list2">
+						<ul>
+							<h5>USEFUL LINKS</h5>
+							<p>Blog</p>
+							<p>Careers</p>
+							<p>Site Map</p>
+							<p>Corporate Information</p>
+							<p>Whitehat</p>
+						</ul>
+					</div>
+					<div class="list2">
+						<ul>
+							<h5>CONTACT US</h5>
+							<p>Facebook</p>
+							<p>Twitter</p>
+							<p>Instagram</p>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="bottom">
+				<div class="social">
+					<h5>KEEP IN TOUCH</h5>
+					<div class="link">
+						<a href ="https://www.facebook.com/sufiyandanish" target="_blank">
+							<i class="fa-brands fa-square-facebook"></i>
+						</a>
+					</div>
+					<div class="link">
+						<a href ="https://www.instagram.com/sufiyan027/" target="_blank">
+							<i class="fa-brands fa-square-instagram"></i>
+						</a>
+					</div>
+					<div class="link">
+						<a href ="https://x.com/SufiyanMsd" target="_blank">
+							<i class="fa-brands fa-square-x-twitter"></i>
+						</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="end">
+			<div class="mini-container">
+				<p>&copy; 2024, 10's free.com</p>
+			</div>
+		</div>
+
+	</body>
+</html>
+
+

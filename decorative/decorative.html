@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="../image/icon1.ico" rel="icon">
+    <title>Decorative</title>
+    <link rel="stylesheet" href="decorative.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap">
+</head>
+<body>
+    <header class="head">
+        <div class="logo-image">
+            <a href="../index/index.html">
+                <img src="../image/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="list">  
+            <div class="fashion"><a href="../fashion/fashion.html">Fashion</a></div>
+            <div class="beauty"><a href="../beauty/beauty.html">Beauty</a></div>
+            <div class="electronics"><a href="../electronic/electronics.html">Electronics</a></div>
+            <div class="decorative"><a href="decorative.html">Decorative</a></div>
+        </div>
+        <div class="search-box">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search your item" class="input">
+            </div>
+        </div>
+        <div class="right">
+            <div class="user">
+                <div class="icon"><i class="fa-regular fa-user"></i></div>
+                <div class="font">User</div>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Address</a>
+                    <a href="../logout/logout.html">Logout</a>
+                </div>
+            </div>
+            <div class="wishlist">
+                <div class="icon"><i class="fa-regular fa-heart"></i></div>
+                <div class="font">Wishlist</div>
+            </div>
+            <a href="../cart/cart.html" class="cart-link">
+                <div class="cart">
+                    <div class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="item-count">0</span> <!-- This span will display the number of items -->
+                    </div>
+                    <div class="font">Cart</div>
+                </div>
+			</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="filter">
+            <h1>Filter Items</h1>
+            <br>	
+            <h3>Filter by Name:</h3>
+            <div class="name">
+                <input type="checkbox" id="decorativeItem1" value="Wall Art">
+                <label for="decorativeItem1">Wall Art</label><br>
+                <input type="checkbox" id="decorativeItem2" value="Vase">
+                <label for="decorativeItem2">Vase</label><br>
+                <input type="checkbox" id="decorativeItem3" value="Table Decor">
+                <label for="decorativeItem3">Table Decor</label><br>
+                <input type="checkbox" id="decorativeItem4" value="Lighting">
+                <label for="decorativeItem4">Lighting</label><br>
+                <input type="checkbox" id="decorativeItem5" value="Candles">
+                <label for="decorativeItem5">Candles</label><br><br>
+            </div>
+
+            <!-- Checkbox filters for cost -->
+            <h3>Filter by Cost:</h3>
+            <div class="cost">
+                <input type="checkbox" id="costLow" value="low">
+                <label for="costLow">Below ₹500</label><br>
+                <input type="checkbox" id="costMid" value="mid">
+                <label for="costMid">₹500 - ₹1000</label><br>
+                <input type="checkbox" id="costHigh" value="high">
+                <label for="costHigh">Above ₹1000</label><br><br>
+            </div>
+
+            <button onclick="applyFilter()">Apply Filters</button><br><br>
+            <button onclick="resetFilters()">Reset Filters</button>
+
+            <!-- Display results -->
+            <ul id="results"></ul>
+        </div>
+        <div class="big-box">
+        </div>
+    </div>
+    
+    <br>
+
+    <div class="back-to-top"><a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a></div>
+
+    <div class="last">
+        <div class="block">
+            <div class="mini-block">
+                <div class="list2">
+                    <ul>
+                        <h5>ONLINE SHOPPING</h5>
+                        <p><a href="../fashion/fashion.html" style="text-decoration: none; color: #414141;">Fashion</a></p>
+                        <p><a href="../beauty/beauty.html" style="text-decoration: none; color: #414141;">Beauty</a></p>
+                        <p><a href="../electronic/electronics.html" style="text-decoration: none; color: #414141;">Electronics</a></p>
+                        <p><a href="decorative.html" style="text-decoration: none; color: #414141;">Decorative</a></p>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <h5>CUSTOMER POLICIES</h5>
+                        <p>Contact Us</p>
+                        <p>FAQ</p>
+                        <p>T&C</p>
+                        <p>Shipping</p>
+                        <p>Cancellation</p>
+                        <p>Returns</p>
+                        <p>Privacy Policies</p>
+                        <p>Grievance Officer</p>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <h5>USEFUL LINKS</h5>
+                        <p>Blog</p>
+                        <p>Careers</p>
+                        <p>Site Map</p>
+                        <p>Corporate Information</p>
+                        <p>Whitehat</p>
+                    </ul>
+                </div>
+                <div class="list2">
+                    <ul>
+                        <h5>CONTACT US</h5>
+                        <p>Facebook</p>
+                        <p>Twitter</p>
+                        <p>Instagram</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="social">
+                <h5>KEEP IN TOUCH</h5>
+                <div class="link">
+                    <a href="https://www.facebook.com/sufiyandanish" target="_blank">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="https://www.instagram.com/sufiyandanish" target="_blank">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                </div>
+                <div class="link">
+                    <a href="https://twitter.com/sufiyandanish" target="_blank">
+                        <i class="fa-brands fa-square-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <div class="mini-container">
+            <p>&copy; 2024, 10's free.com</p>
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+    <script src="decorative.js" defer></script>
+</body>
+</html>
